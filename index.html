@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- 基础信息 -->
+    <html lang="zh-cmn-Hans">
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="force-rendering" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="EKSZZ,HOMEPAGE">
+    <title>Ekszz.com</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <link rel="apple-touch-icon" href="https://unpkg.com/dmego-home-page@latest/apple-touch-icon.png">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/bj.css">
+    <!--引入fontawesome-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css" media="all">
+    <!--科技炫酷按钮-->
+    <link rel="stylesheet" type="text/css" href="css/sey.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" id="theme-styles" />
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-41807329-1']);
+        _gaq.push(['_gat._forceSSL']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body oncontextmenu=self.event.returnValue=false onselectstart="return false">
+    <span class="mobile btn-mobile-menu">
+        <i class="social iconfont icon-list btn-mobile-menu__icon"></i>
+        <i class="social iconfont icon-ngleup btn-mobile-close__icon hidden"></i>
+    </span>
+    <header id="panel" class="panel-cover"
+        style="background: url(images/bg1.webp) center center / cover no-repeat rgb(100, 100, 100);">
+        <!--星空背景-->
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div class="panel-main">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content">
+                    <div class="ih-item circle effect rotate">
+                        <a class="blog-button">
+                            <div class="img"> <img src="images/avatar.jpg" alt="img"
+                                    class="js-avatar iUp profilepic header-logo">
+                            </div>
+                        </a>
+                    </div>
+                    <h1 class="panel-cover__title panel-title iUp">
+                        <br />EkszZ
+                    </h1>
+                    <p class="panel-cover__subtitle panel-subtitle iUp">珊瑚海•寂寞林</p>
+                    <hr class="panel-cover__divider iUp" />
+                    <p id="description" class="panel-cover__description iUp">因为你，所以我，爱上那片天空。
+                        <br />
+                        <strong>-「MAYDAY」</strong>
+                    </p>
+                    <div class="navigation-wrapper iUp">
+                        <div>
+                            <nav class="cover-navigation cover-navigation--primary">
+                                <ul class="navigation">
+                                    <li class="navigation__item">
+                                        <a href="#" onclick="blog()"
+                                            style="--clr:#cfcfcf"><span>BLOG</span><i></i></a>
+                                        <script>
+                                            function blog() {
+                                                Swal.fire(
+                                                    'The Blog?',
+                                                    'You need to find by yourself.<br />Hint: pwn??.com',
+                                                    'question'
+                                                );
+                                            }
+                                        </script>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" onclick="cat()"
+                                            style="--clr:#1e9bff"><span>CAT</span><i></i></a>
+                                        <script>
+                                            function cat() {
+                                                Swal.fire({
+                                                    title: 'Cat! Cat! Cat!',
+                                                    width: 400,
+                                                    padding: '2em',
+                                                    color: '#716add',
+                                                    background: '#fff url(images/trees.png)',
+                                                    backdrop: `
+                                                        rgba(0,0,123,0.4)
+                                                        url("images/nyan-cat.gif")
+                                                        left top
+                                                        no-repeat
+                                                    `
+                                                });
+                                            }
+                                        </script>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" onclick="flag()"
+                                            style="--clr:#28a745"><span>FLAG</span><i></i></a>
+                                        <script>
+                                            function flag() {
+                                                let timerInterval
+                                                Swal.fire({
+                                                title: 'This is one FLAG',
+                                                html: 'flag{W3c0me_t0_my_Sit3}<br /><br />I will close in <b></b> milliseconds.',
+                                                footer: 'There is another flag somewhere...',
+                                                timer: 5000,
+                                                timerProgressBar: true,
+                                                didOpen: () => {
+                                                    Swal.showLoading()
+                                                    const b = Swal.getHtmlContainer().querySelector('b')
+                                                    timerInterval = setInterval(() => {
+                                                    b.textContent = Swal.getTimerLeft()
+                                                    }, 100)
+                                                },
+                                                willClose: () => {
+                                                    clearInterval(timerInterval)
+                                                }
+                                                }).then((result) => {});
+                                            }
+                                        </script>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" onclick="alipay()" style="--clr:#ebe417"><span>V50</span><i></i></a>
+                                        <script>
+                                            function alipay() {
+                                                Swal.fire({
+                                                    confirmButtonText: "3Q",
+                                                    imageUrl: "images/alipay_qr.jpg",
+                                                    imageWidth: 200,
+                                                    width: 300
+                                                });
+                                            }
+                                        </script>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                        <div class="iUp">
+                            <nav class="cover-navigation navigation--social">
+                                <ul class="navigation">
+                                    <li class="navigation__item">
+                                        <a href="https://github.com/ekszz" title="Github" target="_blank">
+                                            <j class="iconfont icon-github"></j>
+                                            <span class="label">Github</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-cover--overlay cover-slate"></div>
+        </div>
+        <div class="remark iUp">
+            <p class="power">© 2008
+                <script>document.write(' - ' + (new Date()).getFullYear())</script> by EKSZZ
+            </p>
+        </div>
+    </header>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/fetch.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
