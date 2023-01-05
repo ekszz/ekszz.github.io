@@ -13,10 +13,10 @@ body {
 a:before 
 {
 	border-radius: 25px;
-    content: '';
-    position: absolute;
-    inset: 2px;
-    background: #ffffff00;
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: #ffffff00;
 }
 
 .ih-item.circle.effect {
@@ -10101,17 +10101,4 @@ j {
     -ms-transform: scale(1, 1);
     transform: scale(1, 1);
   }
-}
-
-/*弹窗美化*/
-/*.iziToast:after {
-  box-shadow: none !important;
-}
-
-.iziToast {
-  border-radius: 5px !important;
-}
-*/
-.iziToast-message.slideIn {
-  margin-top: 5px !important;
 }
